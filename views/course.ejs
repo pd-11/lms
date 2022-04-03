@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>course page</title>
+	<!----css file link-->
+	<link rel="stylesheet" href="/course.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!----Linking google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!----font-awsome start-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style>
+		
+		.bgcolor
+		{
+			background: rgba(0,0,0,0.1);
+		}
+
+		body
+		{
+			background: #f17583;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #89f0ee, #e797a0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f08ed2, #f7909c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		color: white;
+		}
+
+		.navbar
+		{
+			background: #457780;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9bcee2, #9eaef3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9cdef1, #91e3ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+		}
+
+
+#myhead
+{
+	font-family: 'Lobster', cursive;
+}
+
+.navbar
+{
+	padding: 5px 0px;
+	 
+	background-color:  #f3f3f3 !important;
+	font-size: 15px;
+	border-bottom: none !important;
+	transition: all 0.5s ease-in-out; 
+	
+}
+.collapse navbar-collapse{
+	font-size: 15px;
+}
+ul li a
+{
+	color: rgb(71, 10, 240) !important;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.5s ease-in;
+	
+}
+
+ul li a:hover
+{
+	color: rgb(238, 14, 14) !important;
+}
+.navbar-toggle
+{
+	border:1px solid white !important;
+	transition: all 0.5s ease-in;
+}
+.navbar-toggle:hover
+{
+	background-color:deepskyblue !important;
+}
+
+#our-location
+{
+	border: 1px solid white ;
+	border-radius: 45px;
+	padding: 12px 12px 12px 12px;
+	
+	background: rgb(156, 191, 202) !important;
+
+}
+#our-location:hover
+{
+	background-color: white !important;
+	
+}
+
+.navbar-inverse
+{
+	background-color: #9cc2e9 !important;
+}
+
+.icons .fa
+{
+	font-size: 40px;
+	margin-right: 7px;
+}
+
+.cta-div
+{
+	margin-top: 30px;
+}
+
+.btn1
+{
+	padding: 13px 18px;
+	background-color: transparent;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 20px;
+	border :2px solid white;
+	border-top-left-radius: 15px;
+	transition: all 0.3s ease-in;
+	margin-right: -6px;
+
+
+}
+
+.btn2
+{
+	padding: 13px 18px;
+	background-color: transparent;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 13px;
+	border :2px solid white;
+	background-color: rgb(185, 201, 94);
+	border-bottom-right-radius: 15px;
+	transition: all 0.5s ease-in;
+
+}
+.btn2:hover
+{
+	text-decoration: none;
+	color:rgb(72, 221, 13);
+	background-color: transparent;
+	border-color: rgb(211, 187, 187);
+}
+		
+.latest-news-wrap
+{
+	box-shadow: 0px 3px 10px rgba(241, 247, 243, 0.2);
+	height: 350px;
+
+}
+.news-img
+{
+	position: relative;
+
+}
+
+.news-img:before
+{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgb(245, 210, 210);
+	 content: "";
+	 opacity: 0;
+	 transform: scale(.8);
+	 transition: all 0.5s;
+
+}
+
+
+/*=======================================
+       Programming Languages Properties Start
+==========================================*/
+
+
+
+.latest-news-wrap
+{
+	box-shadow: 0px 3px 10px rgba(241, 247, 243, 0.2);
+	height: 365px;
+	border: black;
+}
+.news-img
+{
+	position: relative;
+}
+
+.news-img:before
+{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgb(245, 210, 210);
+	 content: "";
+	 opacity: 0;
+	 transform: scale(.8);
+	 transition: all 0.5s;
+
+}
+
+.latest-news-wrap:hover .news-img:before
+{
+	opacity: .5;
+	transform: scale(1);
+}
+
+.news-content p:hover
+{
+	margin-bottom: 10px;
+	text-align: justify;
+	margin-top: 10px;
+	color: black;
+	transform: scale(1);
+}
+
+
+.news-content a
+{
+	font-size: 15px;
+	background-color: #0cd6dd;
+	padding:10px 20px;
+	color: rgb(17, 16, 16);
+	transition: all 0.5s ease-in;
+}
+
+
+.news-content a:hover
+{
+	font-size: 14px;
+	border:1px solid #34495e;
+	border-top-right-radius: 20px;
+	background-color: transparent;
+	color: #d38a8a;
+	margin-right: 0;
+	text-decoration: none;
+
+}
+
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!------Responsive Button---->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="navi">
+                 <!------Navigation menus starts---->
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="/views/dashbord.ejs"><i class="fa fa-fw fa-home"></i>Home</a></li>
+					<li> <a href="/views/course.ejs"><i class="fa fa-pencil-square"></i> Courses</a></li>
+					<li> <a href="/views/tasks.ejs"><i class="fa fa-tasks"></i> Tasks</a></li>
+					<li> <a href="/views/profile.ejs"><i class="fa fa-fw fa-user"></i>Profile</a></li>
+					<li> <a href="/views/register.ejs"><i class="fa fa-sign-out"></i>Logout</a></li>
+				</ul>
+	                 <!------Navigation menus ends---->
+			</div>
+		</div>
+	</nav>
+			<!---Navigation Ends	----->
+
+ 			<!---programming languages Section Start	----->
+<br><br><br>
+ 			<section class="latest-news-area" id="latest">
+ 				<div class="container">
+ 					<div class="row">
+ 						<div class="col-xs-12">
+ 							<div class="section-title text-center">
+								<h1 style="font-size: 20px;">Following are the available programming languages <br>
+									</h1>
+
+								<p style="font-size: 15px;">Start learning</p>
+ 							</div>
+ 						</div>
+ 					</div>
+<br>
+
+ 					<div class="row">
+ 						<div class="news-active">
+ 							<div class="col-md-4 col-sm-6 col-xs-12 content-border" >
+ 								<div class="bgcolor latest-news-wrap " >
+ 									<div class="news-img">
+										<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU75KW_sWxsxFnoSeeGEsyC_VMLrm0U6B2HQYb5SGjbqUHof-Gdv0uXdc2EqK4aFXl4T4&usqp=CAU" width="370" height="800" class="img-responsive">
+ 									</div>
+
+ 									<div class="news-content">
+ 										<p>
+											Java is a popular programming language, created in 1995. It is owned by Oracle, and more than 3 billion devices run Java.
+											<br>
+											Java is used to develop mobile apps, web apps, desktop apps, games and much more.						
+ 										</p>
+										 <br>
+ 										<a href="https://www.youtube.com/watch?v=hBh_CC5y8-s">Start Learning...</a>
+ 									</div>
+ 								</div>
+ 							</div>
+
+
+ 							<div class="col-md-4 col-sm-6 col-xs-12 content-border">
+ 								<div class="bgcolor latest-news-wrap">
+ 									<div class="news-img">
+ 										<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeIeVu7kf17z_H1uf9ZKaxnNbaavKzuAJ9rw&usqp=CAU"  width="370" height="500" class="img-responsive">
+ 										
+ 									</div>
+ 									<div class="news-content">
+ 										<p>
+ 											Python is a high-level, general-purpose programming language.Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small- and large-scale projects.
+ 										</p><br>
+ 										<a href="https://youtu.be/WGJJIrtnfpk">Start Learning...</a>
+ 									</div>
+ 								</div>
+ 							</div>
+
+
+ 							<div class="col-md-4 col-sm-6 col-xs-12 content-border">
+ 								<div class="bgcolor latest-news-wrap">
+ 									<div class="news-img">
+ 										<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgmJkh2nfX1BSSvycp74DuGu1Qbe4LR3IjTQru5TTJPAelFj1Iq9oX1pUwP5L0JqHUX1U&usqp=CAU" width="370" height="800" class="img-responsive">
+ 										
+ 									</div>
+
+ 									<div class="news-content">
+ 										<p>
+											Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets.
+ 										</p><br>
+ 										<a href="https://www.youtube.com/watch?v=aS__9RbCyHg">Start Learning...</a>
+ 									</div>
+ 								</div>
+ 							</div>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				
+ 			</section>
+</body>
+</html>

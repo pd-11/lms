@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>profile page</title>
+	<!----css file link-->
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!----Linking google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!----font-awsome start-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style>
+		
+		.bgcolor
+		{
+			background: rgba(0,0,0,0.1);
+		}
+
+		body
+		{
+			background: #f17583;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #89f0ee, #e797a0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f08ed2, #f7909c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		color: white;
+		}
+
+		.navbar
+		{
+			background: #457780;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9bcee2, #9eaef3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9cdef1, #91e3ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+		}
+
+
+#myhead
+{
+	font-family: 'Lobster', cursive;
+}
+
+.navbar
+{
+	padding: 5px 0px;
+	 
+	background-color:  #f3f3f3 !important;
+	font-size: 15px;
+	border-bottom: none !important;
+	transition: all 0.5s ease-in-out; 
+	
+}
+.collapse navbar-collapse{
+	font-size: 15px;
+}
+ul li a
+{
+	color: rgb(71, 10, 240) !important;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.5s ease-in;
+	
+}
+
+ul li a:hover
+{
+	color: rgb(238, 14, 14) !important;
+}
+.navbar-toggle
+{
+	border:1px solid white !important;
+	transition: all 0.5s ease-in;
+}
+.navbar-toggle:hover
+{
+	background-color:deepskyblue !important;
+}
+
+#our-location
+{
+	border: 1px solid white ;
+	border-radius: 45px;
+	padding: 12px 12px 12px 12px;
+	
+	background: rgb(156, 191, 202) !important;
+
+}
+#our-location:hover
+{
+	background-color: white !important;
+	
+}
+
+.navbar-inverse
+{
+	background-color: #9cc2e9 !important;
+}
+
+.icons .fa
+{
+	font-size: 40px;
+	margin-right: 7px;
+}
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 15px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+.img{
+	border-radius: 50%;
+}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!------Responsive Button---->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="navi">
+                 <!------Navigation menus starts---->
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="/views/dashbord.ejs"><i class="fa fa-fw fa-home"></i>Home</a></li>
+					<li> <a href="/views/course.ejs"><i class="fa fa-pencil-square"></i> Courses</a></li>
+					<li> <a href="/views/tasks.ejs"><i class="fa fa-tasks"></i> Tasks</a></li>
+					<li> <a href="/views/profile.ejs"><i class="fa fa-fw fa-user"></i>Profile</a></li>
+					<li> <a href="/views/register.ejs"><i class="fa fa-sign-out"></i>Logout</a></li>
+				</ul>
+	                 <!------Navigation menus ends---->
+			</div>
+		</div>
+	</nav>
+			<!---Navigation Ends	----->
+	<br><br><br>
+	<h2 class="text-center">Profile Settings</h2>
+	<br>
+	<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+								
+								<div class="d-flex flex-column align-items-center text-left p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyaootB3GWh93iUE-2YQc7i3UknTmdr1w4NIx29H_DPQnXqA-kJi5xQpvqEvLyCALfXT0&usqp=CAU"></div>
+								<br><br>
+                <div class="row mt-2">
+                    <div class="col-md-10"><label class="labels">User name</label><input type="text" class="form-control" placeholder="riya" disabled></div>
+                    
+                </div>
+								<br>
+                <div class="row mt-5">
+                    <div class="col-md-10"><label class="labels">Phone Number</label><input type="text" class="form-control" placeholder="8974332556" disabled></div>
+								</div><br>
+								<div class="row mt-6">		
+                    <div class="col-md-10"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="riya@gmail.com" disabled></div>
+                    
+								</div>
+                <br>
+                <div class="mt-5 text-centre"><button class="btn btn-primary profile-button" type="button">Edit Profile</button><button class="btn btn-primary profile-button" type="button" style="margin: 10%;">Save Profile</button></div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

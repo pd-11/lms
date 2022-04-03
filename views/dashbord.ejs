@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home page</title>
+	<!----css file link-->
+	<link rel="stylesheet" href="/course.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<!----Linking google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!----font-awsome start-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+  outline: none;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.home{
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  overflow:hidden;
+  position: relative;
+}
+
+.home .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 14rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.home .content h1{
+  font-size: 5rem;
+  padding:0 1rem;
+  color:rgb(113, 41, 41);
+  text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  text-transform: uppercase;
+}
+
+.home .content p{
+  font-size: 3rem;
+  color:rgb(1, 7, 121);
+  padding:1rem 25rem;
+}
+
+.home::before{
+  position: absolute;
+  bottom:-25rem; left:50%;
+  transform: translateX(-50%);
+  width:120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.teacher{
+  color: black;
+  align-items: center;
+  justify-content: center;
+  position: center;
+}
+.teacher .card-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:1rem 0;
+}
+
+.teacher .card-container .card{
+  padding:2rem;
+  margin: 2rem;
+  background:rgb(143, 188, 184);
+  text-align: center;
+  width:30rem;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.teacher .card-container .card img{
+  height:30rem;
+  width:100%;
+  object-fit: cover;
+  transition: .2s;
+  border-radius: 20px;
+}
+
+.teacher .card-container .card h3{
+  color: black;
+  font-size: 2rem;
+  padding:.5rem 0;
+}
+
+.teacher .card-container .card p{
+  font-size: 1.7rem;
+  color:rgb(21, 20, 20);
+}
+
+.teacher .card-container .card .icons a{
+  font-size: 1.9rem;
+  padding:1.5rem .5rem;
+  color:var(--blue);
+}
+.review{
+  color: black;
+  align-items: center;
+  justify-content: center;
+  position: center;
+}
+
+.review .box-container{ 
+  display: flex;
+  justify-content: center;
+  padding-top: 4rem;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  color: black;
+}
+
+.review .box-container .box{
+  width:28rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  background:rgb(143, 188, 184);
+  margin:4rem 2rem;
+  color: black;
+}
+
+.review .box-container .box img{
+  height:9rem;
+  width:9rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 1rem;
+  border:.6rem solid var(--black);
+  border-left:.6rem solid var(--black);
+  border-bottom:.6rem solid var(--black);
+}
+
+.review .box-container .box h3{
+  font-size: 2rem;
+  color:var(--pink);
+  padding:0 .5rem;
+}
+
+.review .box-container .box p{
+  font-size: 1.5rem;
+  color:rgb(13, 12, 12);
+  padding:0 1.3rem;
+
+}
+
+.review .box-container .box .stars i{
+  font-size: 1.6rem;
+  color:var(--violet);
+  padding:1.3rem .1rem;
+}
+
+.footer{
+  text-align: center;
+}
+
+.footer .icons{
+  padding:3rem 0;
+}
+
+.footer .icons a{
+  height:4.5rem;
+  width: 4.5rem;
+  line-height: 4.2rem;
+  text-align: center;
+  border-radius: 50%;
+  color:var(--violet);
+  border:.2rem solid var(--violet);
+  font-size: 2rem;
+  margin:0 .1rem;
+  transition: .2s linear;
+}
+
+.footer .icons a:hover{
+  color:#fff;
+  background:var(--pink);
+  border-color: var(--pink);
+}
+
+.footer .credit{
+  font-size: 2rem;
+  border-top: .1rem solid #999;
+  margin:0 auto;
+  margin-bottom: 2rem;
+  color:#666;
+  width:90%;
+  padding:1rem 0;
+}
+
+@media (max-width:768px){
+
+  html{
+    font-size: 55%;
+  }
+  h1{
+    align-items: center;
+  }
+  header .fa-bars{
+    display: block;
+  }
+
+  .home .content p{
+    padding:1.5rem 2rem;
+  }
+
+  .home::before{
+    display: none;
+  }
+}
+		body
+		{
+      background: #f17583;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #89f0ee, #e797a0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f08ed2, #f7909c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		color: white;
+		}
+
+		.navbar
+		{
+			background: #457780;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9bcee2, #9eaef3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9cdef1, #91e3ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+		}
+		.navbar
+{
+	padding: 5px 0px;
+	 
+	background-color:  #f3f3f3 !important;
+	font-size: 15px;
+	border-bottom: none !important;
+	transition: all 0.5s ease-in-out; 
+	
+}
+.collapse navbar-collapse{
+	font-size: 15px;
+}
+ul li a
+{
+	color: rgb(33, 10, 240) !important;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.5s ease-in;
+}
+
+ul li a:hover
+{
+	color: rgb(243, 243, 243) !important;
+}
+.navbar-toggle
+{
+	border:1px solid white !important;
+	transition: all 0.5s ease-in;
+}
+.navbar-toggle:hover
+{
+	background-color:deepskyblue !important;
+}
+
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!------Responsive Button---->
+					
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="navi">
+                 <!------Navigation menus starts---->
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="/views/dashbord.ejs"><i class="fa fa-fw fa-home"></i>Home</a></li>
+					<li> <a href="/views/course.ejs"><i class="fa fa-pencil-square"></i> Courses</a></li>
+					<li> <a href="/views/tasks.ejs"><i class="fa fa-tasks"></i> Tasks</a></li>
+					<li> <a href="/views/profile.ejs"><i class="fa fa-fw fa-user"></i> Profile</a></li>
+					<li> <a href="/views/register.ejs"><i class="fa fa-sign-out"></i>Logout</a></li>
+				</ul>
+	                 <!------Navigation menus ends---->
+			</div>
+		</div>
+	</nav>
+			<!---Navigation Ends	----->
+<br>
+<section class="home" id="home">
+
+	<div class="content">
+			<h1>learn online form home</h1>
+			<p>Educational websites and blogs are great enablers for students as they can find information about the syllabus, extra reference articles, coursework</p>
+	</div>
+</section>
+
+<!-- teacher section starts  -->
+
+<section id="teacher" class="teacher">
+
+	<h1 style="padding-left: 40%;">Our teachers</h1>
+	
+	
+	<div class="card-container">
+	
+			<div class="card">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRet_y2-4jH1NQRWM3LsAoAtxFD1NoPTE3GE1Hbd_o_Y-sOOup1JikIygkiJAPoK48wFMY&usqp=CAU" alt="">
+					<h3>someone's name</h3>
+					<p>i love teaching</p>
+					<div class="icons">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-github"></a>
+					</div>
+			</div>
+	
+			<div class="card">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGn8KO2JK2mEQQ85sqK-DWixBGqzI4QMBJ-_yiC3LcDLVp6rG0SfKCUocfq5Z-2OabsNU&usqp=CAU" alt="">
+					<h3>someone's name</h3>
+					<p>i love teaching</p>
+					<div class="icons">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-github"></a>
+					</div>
+			</div>
+	
+			<div class="card">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfp2c0HuedJg_g93Oam1WcEvOPyr5A0ha0If7k3k2xYfoGSdazW-vqIChl4tuwit0mQiQ&usqp=CAU" alt="">
+					<h3>someone's name</h3>
+					<p>i love teaching</p>
+					<div class="icons">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-instagram"></a>
+							<a href="#" class="fab fa-github"></a>
+					</div>
+			</div>
+	</div>
+	</section>
+	
+	<section id="review" class="review">
+
+		<h1 style="padding-left: 40%;">Students review</h1>
+				
+		<div class="box-container">
+		
+				<div class="box">
+						<img src="https://static8.depositphotos.com/1008303/880/i/600/depositphotos_8803246-stock-photo-asian-college-student.jpg" alt="">
+						<h3>someone's name</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corporis?</p>
+						<div class="stars">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+						</div>
+				</div>
+		
+				<div class="box">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvVx46sJL_l0qwH-Biqxc821yqwTwZRs2b_Q&usqp=CAU" alt="">
+						<h3>someone's name</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corporis?</p>
+						<div class="stars">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+						</div>
+				</div>
+		
+				<div class="box">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DLy4yDaqilCoauxDHtgq8hhKsYBBLZZUcA&usqp=CAU" alt="">
+						<h3>someone's name</h3>
+						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, corporis?</p>
+						<div class="stars">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star-half-alt"></i>
+						</div>
+				</div>
+		
+		</div>
+		
+		</section>
+		
+		<section class="footer">
+		
+		<div class="icons">
+				<a href="#" class="fab fa-facebook-f"></a>
+				<a href="#" class="fab fa-twitter"></a>
+				<a href="#" class="fab fa-instagram"></a>
+				<a href="#" class="fab fa-github"></a>
+				<a href="#" class="fab fa-pinterest"></a>
+		</div>    
+		</section>
+
+
+</body>
+</html>

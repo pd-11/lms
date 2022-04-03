@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tasks page</title>
+	<!----css file link-->
+	<link rel="stylesheet" href="/course.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!----Linking google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+	<!----font-awsome start-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style>
+		
+		.bgcolor
+		{
+			background: rgba(0,0,0,0.1);
+		}
+
+		body
+		{
+			background: #f17583;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #89f0ee, #e797a0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #f08ed2, #f7909c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		color: white;
+		}
+
+		.navbar
+		{
+			background: #457780;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9bcee2, #9eaef3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9cdef1, #91e3ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
+		}
+		.navbar
+{
+	padding: 5px 0px;
+	 
+	background-color:  #f3f3f3 !important;
+	font-size: 15px;
+	border-bottom: none !important;
+	transition: all 0.5s ease-in-out; 
+	
+}
+.collapse navbar-collapse{
+	font-size: 15px;
+}
+ul li a
+{
+	color: rgb(33, 10, 240) !important;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.5s ease-in;
+}
+
+ul li a:hover
+{
+	color: rgb(243, 243, 243) !important;
+}
+.navbar-toggle
+{
+	border:1px solid white !important;
+	transition: all 0.5s ease-in;
+}
+.navbar-toggle:hover
+{
+	background-color:deepskyblue !important;
+}
+h1{
+	text-align: center;
+	color: rgb(130, 32, 32);
+}
+table{
+    width: 60%;
+    margin: 40px auto;
+    background: rgb(112, 137, 148);
+}
+
+table.list{
+    text-align: center;
+    width: 60%;
+    padding: 10px;
+}
+
+td{
+    border: 1px solid rgb(20, 20, 20);
+    text-align: centre;
+    padding: 10px;
+	width: fit-content;
+    font-size: 20px;
+    color: #f7f6f6;
+}
+
+tr:nth-child(even), table.list thread tr{
+    width:fit-content;
+}
+
+input[type="text"],input[type="date"]{
+    padding:10px 10px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(77, 76, 76);
+    border-radius: 4px;
+		color: black;
+		width: fit-content;
+        font-size: 20px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: rgb(235, 152, 9);
+    padding:6px 8px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: rgb(235, 152, 9);
+    padding:6px 10px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background:#4b99d8 ;
+}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!------Responsive Button---->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navi">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>
+			<div class="collapse navbar-collapse" id="navi">
+                 <!------Navigation menus starts---->
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="/views/dashbord.ejs"><i class="fa fa-fw fa-home"></i>Home</a></li>
+					<li> <a href="/views/course.ejs"><i class="fa fa-pencil-square"></i> Courses</a></li>
+					<li> <a href="/views/tasks.ejs"><i class="fa fa-tasks"></i> Tasks</a></li>
+					<li> <a href="/views/profile.ejs"><i class="fa fa-fw fa-user"></i>Profile</a></li>
+					<li> <a href="/views/register.ejs"><i class="fa fa-sign-out"></i>Logout</a></li>
+				</ul>
+	                 <!------Navigation menus ends---->
+			</div>
+		</div>
+	</nav>
+			<!---Navigation Ends	----->
+	<br><br><br>
+
+	<h1><b>Complete the tasks before deadlines</b></h1>
+		<table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="description">Description</label>
+                        <input type="text" name="description" id="description">
+                    </div>
+                    <div>
+                        <label for="completed">Completed</label>
+                        <input type="text" name="completed" id="completed">
+                    </div>
+                    <div>
+                        <label for="myDate">Deadline</label>
+                        <input type="date" id="myDate" value="myDate" >
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th> Description| </th>
+                                <th> Completed|</th>
+                                <th> Deadline </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script>
+			var selectedRow = null
+
+function onFormSubmit(e) {
+	event.preventDefault();
+        var formData = readFormData();
+        if (selectedRow == null){
+            insertNewRecord(formData);
+		}
+        else{
+            updateRecord(formData);
+		}
+        resetForm();    
+}
+
+//Retrieve the data
+function readFormData() {
+    var formData = {};
+    formData["description"] = document.getElementById("description").value;
+    formData["completed"] = document.getElementById("completed").value;
+    formData["myDate"] = document.getElementById("myDate").value;
+    return formData;
+}
+
+//Insert the data
+function insertNewRecord(data) {
+    var table = document.getElementById("storeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+		cell1.innerHTML = data.description;
+    cell2 = newRow.insertCell(1);
+		cell2.innerHTML = data.completed;
+    cell3 = newRow.insertCell(2);
+		cell3.innerHTML = data.myDate;
+    cell4 = newRow.insertCell(3);
+        cell4.innerHTML = `<button style="float: inline-end;"onClick="onEdit(this)">Edit</button>`
+    cell5 = newRow.insertCell(4);
+        cell5.innerHTML =`<button style="float: inline;" onClick="onDelete(this)">Delete</button>`;
+}
+
+//Edit the data
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("description").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("completed").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("myDate").value = selectedRow.cells[2].innerHTML;
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.description;
+    selectedRow.cells[1].innerHTML = formData.completed;
+    selectedRow.cells[2].innerHTML = formData.myDate;
+}
+
+//Delete the data
+function onDelete(td) {
+    if (confirm('Do you want to delete this record?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById('storeList').deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+
+//Reset the data
+function resetForm() {
+    document.getElementById("description").value = '';
+    document.getElementById("completed").value = '';
+    document.getElementById("myDate").value = '';
+    selectedRow = null;
+}
+		</script>
+</body>
+</html>
